@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Samantha Kang's Webpage</title>
+        <style>
+            h1 {
+                text-align: center;
+            }
+            h2 {
+                text-align: center;
+                color: rgb(56, 48, 48);
+            }
+          
+        </style>
+        </head>
+        <body bgcolor = teal>
+            <h1>Samantha Kang</h1>
+            <h2>Email:samantha.kang01@student.csulb.edu | Phone: (310) 900- 9477</h2>
+            <h3>My Introduction </h3>
+            Hello, I am a senior on my last semester at California State University, Long Beach, and my major is Information Systems. <br>
+            Curently looking for internships or entry level position opportunities in either data, cybersecurity, software engineering, <br>
+            or cloud computing fields. I hold the AWS Certified Cloud Practitioner certification and the Azure Fundamentals certification.
+        </body>
+        <p><img src = img.png height = 300 width = 400><br>
+            <a href = resume.html>My Resume</a><br>
+            <a href = resume.docx>Resume Download</a><br>
+            <a href = mailto: samantha.kang01@student.csulb.edu>Email Me</a><br>
+            <a href = http://web.csulb.edu> Check CSULB</a>
+        
+        </p>
+        <button onclick = "displayTime()">Show the current time</button>
+        <!-- <p id = "showTime"></p> -->
+        <script>
+           function displayTime() {
+            const today = new Date;
+            
+            var hour = today.getHours();
+            var minute = today.getMinutes();
+            var second = today.getSeconds();
+            
+            alert(hour + ":" + minute + ":" + second);
+            console.log(hour + ":" + minute + ":" + second);
+            // document.getElementById("showTime").innerHTML = hour + ":" + minute + ":" + second;
+            }
+        </script>
+        
+        
+        
+</html>
