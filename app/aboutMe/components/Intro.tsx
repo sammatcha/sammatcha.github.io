@@ -1,10 +1,23 @@
-import React from "react";
+import React, {ReactNode} from "react";
+import FadeIn from "../hook/FadeIn";
+
+interface ParentComponentProps {
+    children: ReactNode;
+    durationClass: string;
+    delayClass:string;
+   
+}
 
 export default function Intro(){
     return(
-        <div className="flex flex-col p-6 lg:p-10 ">
-            <p className="font-semibold text-6xl">Hello c:</p>
-            <div className="text-4xl">My name is Samantha</div>
+        <div className="flex flex-col m-20 h-svh ">
+        <p className="text-3xl dancing-text md:text-4xl lg:text-5xl">Hello</p>
+        <FadeIn delayClass = "delay-500">
+            <p className="mt-5 text-2xl roboto text md:text-4xl lg:text-5xl lg:mt-10">
+               I am Sam
+            </p>
+        </FadeIn>
+       
         </div>
-    )
-}
+    );
+};

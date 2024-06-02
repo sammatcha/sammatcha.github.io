@@ -14,16 +14,11 @@ export default function FadeIn({children, delayClass}: FadeInProps){
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        // console.log('useEffect running')
+    
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => 
                 setIsVisible(entry.isIntersecting));
-                // console.log('entries',entries)
-                // if (entry.isIntersecting){
-                //     console.log('intersecting')
-                //         setIsVisible(true);
-                //         observer.disconnect();
-                // }
+
                   });
         if (ref.current) {
             observer.observe(ref.current);
