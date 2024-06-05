@@ -6,15 +6,20 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --font-inter: 'Inter', san-serif;
+  --font-satisfy: 'Satisfy', cursive;
+  --font-dancing: 'Dancing_Script', cursive;
+  --font-roboto:'Roboto', serif;
+
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-} */
+}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,6 +29,21 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+.inter-text{
+  font-family: var(--font-inter);
+}
+
+.satisfy-text{
+  font-family: var(--font-satisfy);
+}
+
+.dancing-text{
+  font-family: var(--font-dancing);
+}
+
+.roboto-text{
+  font-family: var(--font-roboto);
 }
 
 @layer utilities {
