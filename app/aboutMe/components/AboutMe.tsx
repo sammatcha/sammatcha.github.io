@@ -3,8 +3,6 @@ import RootLayout from "@/app/layout";
 import React from "react";
 import Intro from "./Intro";
 
-import React from "react";
-
 
 export default function AboutMe(){
     return(
