@@ -9,17 +9,17 @@
   --font-inter: 'Inter', san-serif;
   --font-satisfy: 'Satisfy', cursive;
   --font-dancing: 'Dancing_Script', cursive;
-  --font-roboto:'Roboto', san-serif;
+  --font-roboto:'Roboto', serif;
 
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-} */
+}
 
 body {
   color: rgb(var(--foreground-rgb));
