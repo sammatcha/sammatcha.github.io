@@ -1,11 +1,15 @@
 import Image from "next/image";
+import AboutMe from "./aboutMe/components/AboutMe";
+import Home from "./home/Home";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-       
-      </div>
+    <main className="min-h-screen"  >
+      
+        <Home/>
+    
+        <AboutMe />
+      
     </main>
   );
 }
