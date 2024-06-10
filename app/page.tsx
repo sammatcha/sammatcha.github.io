@@ -7,8 +7,7 @@ export default function HomePage() {
     <main className="min-h-screen"  >
       
         <Home/>
-    
-        <AboutMe />
+        <AboutMe/>
       
     </main>
   );
