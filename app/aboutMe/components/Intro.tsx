@@ -11,7 +11,7 @@ interface ParentComponentProps {
 
 export default function Intro(){
     return(
-        <div className="border-4 border-darkGreyBlue shadow-darkGreyBlue shadow-2xl bg-slightGreyBlue flex mx-auto max-w-fit mb-5">
+        <div className="border-4 border-darkGreyBlue shadow-darkGreyBlue shadow-2xl bg-darkGreyBlue flex mx-auto max-w-fit mb-5">
             <div className="flex flex-col h-screen p-10 ">
             
                 <div className="basis-1/2  ">

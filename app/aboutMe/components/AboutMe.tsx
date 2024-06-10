@@ -8,7 +8,7 @@ import Intro from "./Intro";
 export default function AboutMe(){
     return(
        <>
-            <header className="min-h-screen min-w-full bg-darkMode px-10 py-10" >
+            <header className="min-h-screen min-w-full bg-slightGreyBlue px-10 py-10" >
                 <div id="about">
 
                     <div>
