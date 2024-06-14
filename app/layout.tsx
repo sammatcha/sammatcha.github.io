@@ -41,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${roboto.variable} ${dancing.variable} ${satisfy.variable} bg-slightGreyBlue` }>
+      <body className={`${inter.variable} ${roboto.variable} ${dancing.variable} ${satisfy.variable}` }>
        <NavBar/>
         {children}
         </body>

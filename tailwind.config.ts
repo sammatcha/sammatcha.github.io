@@ -16,8 +16,8 @@ const config: Config = {
       },
       colors: {
         'darkMode' : '#0F172A',
-        'darkGreyBlue' : '#1E293B',
-        'slightGreyBlue' : '#131B2E'
+        'slightGreyBlue' : '#1E293B',
+        'darkGreyBlue' : '#131B2E' 
       },
     },
   },
