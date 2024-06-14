@@ -1,16 +1,17 @@
 import React from "react";
 import Socials from "./Socials";
 
-const Item  = {
-    id: Number,
-    name: String,
-    href: String
+type Item  = {
+    id: number,
+    name: string,
+    href: string
 };
 
 const nav = [
     {id: 1, name:'Home', href: '/'},
     {id: 2, name:'About', href: '#about'},
     {id: 3, name:'Work', href: '#work'},
+    {id: 4, name:'Blog', href: '#blog'},
 ];
 
 export default function NavBar(){
