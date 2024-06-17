@@ -2,6 +2,7 @@ import Image from "next/image";
 import AboutMe from "./aboutMe/components/AboutMe";
 import Home from "./home/Home";
 import Work from "./work/Work";
+import Certification from "./certification/Certification";
 
 export default function HomePage() {
   return (
@@ -10,7 +11,7 @@ export default function HomePage() {
         <Home/>
         <AboutMe/>
         <Work/>
-      
+        <Certification/>
     </main>
   );
 }
