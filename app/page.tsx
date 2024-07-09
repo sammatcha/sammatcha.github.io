@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AboutMe from "./aboutMe/components/AboutMe";
+import AboutMe from "./aboutMe/AboutMe";
 import Home from "./home/Home";
 import Work from "./work/Work";
 import Certification from "./certification/Certification";

@@ -10,7 +10,11 @@
   --font-satisfy: 'Satisfy', cursive;
   --font-dancing: 'Dancing_Script', cursive;
   --font-roboto:'Roboto', serif;
+  --font-roboto_mono: 'Roboto_Mono', serif
 
+}
+*{
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {

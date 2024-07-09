@@ -14,32 +14,33 @@ export default function Socials(){
        }
     return (
 
-    <div>
-        <span className="inline-flex">
+  
+   <div className="relative">
+        <span className="inline-flex py-2 px-2 justify-between md:py-0 md:px-0 md:justify-normal " >
                 <p>Socials</p>
                     <div onClick={(toggleDrop)} className="w-6 text-sky-700 font-bold">
                     <ChevronDownIcon/>   
                     </div>   
         </span>
 
-        <div className={`absolute overflow-hidden border border-slate-500 mt-1 rounded transition-all duration-75 ${isOpen ? 'w-min h-min opacity-100':'opacity-0'}`}>
+        <div className={`absolute overflow-hidden mt-2 rounded transition-all duration-75 ${isOpen ? 'w-min h-min opacity-100':'opacity-0'}`}>
 
         
      
-        <div className="flex flex-col  ">
-            {links.map((link)=> (
-                <a key = {link.name}
-                href = {link.href}
-                className="py-2 px-4"
-                >
-                    {link.name}
-                </a>
-            ))}
-        </div>
+            <div className="flex flex-col mt-2 space-y-2 ">
+                {links.map((link)=> (
+                    <a key = {link.name}
+                    href = {link.href}
+                    className="py-2 px-4 block"
+                    >
+                        {link.name}
+                    </a>
+                ))}
+            </div>
    
         </div>
        
-    </div>
+    </div>  
        
     )
 }

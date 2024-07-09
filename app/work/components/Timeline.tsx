@@ -43,14 +43,14 @@ export default function Timeline(){
             {jobs.map((job, index) => {
                const isLeft = index % 2 === 0;
                return(
-                <div key = {job.id} className={`flex  w-full mb-8 ${isLeft ? "flex-row-reverse ": "flex-row "}`}>
-                    <div className={`flex w-1/2 items-center pl-10 ${isLeft ? "justify-start text-left" : "justify-end text-right"}`}>
-                       <div className={`max-w-sm roboto-text p-4 `}>
-                           <p className="text-xl text-gray-400 underline decoration-1 ">{job.date}</p>
-                           <p className="text-lg font-bold">{job.name}</p>
+                <div key = {job.id} className={`flex min-w-full mb-8  justify-center ${isLeft ? "lg:flex-row-reverse ": "lg:flex-row "}`}>
+                    <div className={`flex lg:w-1/2 items-center lg:pl-10 ${isLeft ? "lg:text-left" : "lg:text-right"}`}>
+                       <div className={`max-w-sm lg:max-w-5xl roboto-text px-3 py-2 lg:p-4 order-last lg:order-none`}>
+                           <p className="text-md lg:text-xl text-gray-400 underline decoration-1 ">{job.date}</p>
+                           <p className="text-md lg:text-lg font-bold">{job.name}</p>
                             <ul className="list-disc text-neutral-400">
                                 {job.body.map((duty,idx) => (
-                                    <li key={idx} className="font-thin">
+                                    <li key={idx} className="font-thin ">
                                         {duty}
                                     </li>
                                 ))}
@@ -59,9 +59,9 @@ export default function Timeline(){
                        </div>
                    </div>
                                                      {/* LOGO DIV */}
-                   <div className={`flex items-center w-3/5  ${isLeft ? "justify-end  ": "justify-start ml-8"}`} >
-                        <div className="rounded-full w-30 h-30 p-1 border-2 flex justify-center items-center  ">
-                            <Image src={job.logo} alt={"logo images of employment"} width={100} height={100} className=" rounded-full bg-slightGreyBlue"/>
+                   <div className={`flex lg:w-5/6 order-first lg:order-none  ${isLeft ? "lg:justify-end lg:pr-4": "lg:justify-start lg:pl-4 "}`} >
+                        <div className="w-16 h-16 mt-2 rounded-full lg:p-1 border-2 flex justify-center items-center lg:w-40 lg:h-40 lg:mt-0">
+                            <Image src={job.logo} alt={"logo images of employment"} width={200} height={200} className=" rounded-full bg-slightGreyBlue"/>
                         </div>
                     </div>
            
