@@ -11,40 +11,32 @@ interface ParentComponentProps {
 
 export default function Intro(){
     return(
-        <div className="border-4 border-darkGreyBlue shadow-darkGreyBlue shadow-2xl bg-darkGreyBlue flex mx-auto max-w-fit mb-5">
-            <div className="flex flex-col h-screen p-10 ">
-            
-                <div className="basis-1/2  ">
-                    <p className="dancing-text text-4xl md:text-5xl lg:text-6xl">hello.</p>
-                    <div>
-                        <FadeIn delayClass = "delay-500">
-                        <p className={"inter-text text-2xl md:text-3xl lg:text-4xl"}>
-                        I&#39;m Sam
-                        </p>
-                        </FadeIn>
-                        <span className="dancing-text inline-flex items-center text-xl md:text-2xl lg:text-4xl"> <p className=" roboto-text mr-2 mt-2  text-lg md:text-xl lg:text-2xl">Step into</p> my corner. 
+        <div className="container w-full md:p-10 justify-between">
+            <div className="flex flex-col justify-center h-auto lg:max-w-md lg:w-1/2 ">
+                <div className="text-sm roboto_mono-text lg:leading-relaxed lg:tracking-wide xl:text-lg">
+                    <h1 className="text-lg xl:text-3xl 2xl:text-4xl font-bold flex justify-center lg:justify-normal">About</h1>
+                        <p className="text-neutral-400 mt-3 xl:mt-6">
+                        With over a year of professional experience, I have worked extensively with Laravel and React. <br/>
+                        <span className="inline-block mt-1">
+                        Currently, I am expanding my skills through personal projects. <br/>
+                        I am continually learning and looking forward to applying my skills and experience to meaningful work. 
                         </span>
-                        
-                    </div>
+                        <span className={"inline-block mt-1"}>
+                        I like reading, gaming, traveling, animals, and anime
+                        </span>
+                        </p>
                 </div>
-
-                <div className="flex flex-col ">
-                    <div className="flex justify-center items-center">
-                        
-                        <h1 className="underline roboto-text decoration-from-font font-thin text-xl md:text-2xl lg:text-3xl">Fun Facts</h1>
-                       
-                    </div>
-                   
-                    <ul>
-                       
-                        <FunFacts/>
-                     
-                     
-                    </ul>
-                    
-                </div>
-           
             </div>
+           
+            <div className="grid grid-cols-1 grid-flow-row gap-4 lg:gap-6 lg:max-w-xs lg:mt-10">
+                <div className="text-sm text-sky-500 flex justify-end roboto-mono-text mt-4 lg:hidden">
+                    Fun facts
+                </div>
+                <FunFacts/>
+            </div>                    
+          
+           
+         
         </div>
     );
 };

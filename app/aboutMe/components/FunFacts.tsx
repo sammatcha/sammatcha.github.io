@@ -1,23 +1,24 @@
 import React from "react";
 
 const facts = [
-    {id:0, text:'I have a dog and rabbits'},
-    {id:1, text:'I have been stung by a scorpion'},
-    {id:2, text:'I enjoy reading, traveling, and gaming'},
-    {id:3, text:'I have been lost on a trail in Hawaii for 5 hours'},
+    {id:0, title:'me', description:'I have rabbits and a 3 year old Shiba Inu'},
+    {id:1, title:'Fact', description:'I have been stung by a scorpion'},
+    {id:2, title:'Fact', description:'I have been lost on a trail in Hawaii for about 5 hours'},
 ]
 export default function FunFacts(){
     return(
-       <div className="mt-6 ">
-            <div className="grid grid-cols-2 ">
-            {facts.map((fact) => (
-                <li  key = {fact.id}
-                className="px-4 py-4 list-disc"
+        <>
+            {facts.map((fact, id) => (
+                <div  key = {fact.id}
+                className={`p-6 border rounded-lg shadow-lg lg:hover:scale-105 ransform transition-transform ${id %2===0 ? "border-sky-900": "border-sky-500" }`}
                 >
-                    {fact.text}
-                </li>
+                    
+                    <div className="text-sm md:text-xl  ">
+                    {fact.description}
+                    </div>
+                </div>
             ))}
-            </div>
-      </div>
+          </>  
+      
     )
 }

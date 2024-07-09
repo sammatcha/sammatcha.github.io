@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Satisfy, Dancing_Script, Roboto } from "next/font/google";
+import { Inter, Satisfy, Dancing_Script, Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 
@@ -28,6 +28,12 @@ export const roboto = Roboto({
   variable: '--font-roboto'
 });
 
+export const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  variable:'--font-roboto_mono'
+})
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -41,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${roboto.variable} ${dancing.variable} ${satisfy.variable} bg-slightGreyBlue` }>
+      <body className={`${inter.variable} ${roboto.variable} ${dancing.variable} ${satisfy.variable} ${roboto_mono.variable} ` }>
        <NavBar/>
         {children}
         </body>

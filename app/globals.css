@@ -10,7 +10,11 @@
   --font-satisfy: 'Satisfy', cursive;
   --font-dancing: 'Dancing_Script', cursive;
   --font-roboto:'Roboto', serif;
+  --font-roboto_mono: 'Roboto_Mono', serif
 
+}
+*{
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,13 +27,15 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    background-color: #131B2E;
 }
+
 .inter-text{
   font-family: var(--font-inter);
 }
