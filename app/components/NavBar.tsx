@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Socials from "./Socials";
+import MobileNavBar from "./MobileNavBar";
 
 type Item  = {
     id: number,
@@ -15,15 +16,18 @@ const nav = [
 ];
 
 export default function NavBar(){
+   
     return(
-       <nav className="max-w-full top-0 overflow-hidden ">
-            <div className="flex justify-end p-6 lg:px-8">
+       
+       <nav className="max-w-full relative">
+            <div className="flex justify-end xl:px-8">
             
-                <div className="inline-flex items-center">
+            <MobileNavBar/>
+                <div className={"hidden xl:inline-flex items-center"}>
                 {nav.map((item) => (
                 <a  key = {item.id}
                     href = {item.href}
-                    className="p-4"
+                    className="xl:p-4"
                 >
                 {item.name}
                     </a>

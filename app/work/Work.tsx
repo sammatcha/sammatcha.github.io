@@ -9,18 +9,19 @@ interface ParentConnectProps {
 export default function Work(){
 
     return(
-        <div className="min-w-full min-h-screen mt-10 " id="work">
-            <div className="items-center justify-center flex  ">
-                <span>
-                <h1 className="text-4xl ">Timeline </h1>
-                <p className="border-b w-20 ms-5"></p>
-                </span>
+        <div className="min-w-full min-h-screen mt-5 lg:mt-10 " id="work">
+            
+            <div className="justify-center flex flex-col items-center">
+               <div className="flex flex-col items-center mt-5 lg:mb-10">
+                    <h1 className="text-2xl lg:text-4xl ">Timeline </h1>
+                    <div className="border-b w-10 lg:w-20 lg:ms-5"></div>
+                </div>
+                <Timeline/>
             </div>
-            <Timeline/>
-
-            <div className="flex flex-col justify-center items-center ">
-                <div className="flex justify-center items-center space-x-3 ">
-                {/* <ContactMeButton/> */}
+           
+                                {/* CONNECT */}
+            <div className="flex flex-col justify-center items-center mb-8 lg:mb-10">
+                <div className="flex justify-center items-center">
                 <Connect href={"https://www.linkedin.com/in/samanthakang079/"}/>
                 </div>
             </div>
