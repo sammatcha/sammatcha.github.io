@@ -3,32 +3,32 @@ import { Inter, Satisfy, Dancing_Script, Roboto, Roboto_Mono } from "next/font/g
 import "./globals.css";
 import NavBar from "./components/NavBar";
 
-export const inter = Inter({ 
+ const inter = Inter({ 
   subsets: ['latin'],
   display:'swap',
   variable: '--font-inter'
 });
 
-export const satisfy = Satisfy({ 
+ const satisfy = Satisfy({ 
   subsets: ['latin'],
   weight: ['400'],
   variable: '--font-satisfy'
 });
 
-export const dancing = Dancing_Script({ 
+ const dancing = Dancing_Script({ 
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-dancing'
 });
 
-export const roboto = Roboto({ 
+ const roboto = Roboto({ 
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '700', '900'],
   display :'swap',
   variable: '--font-roboto'
 });
 
-export const roboto_mono = Roboto_Mono({
+ const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
   variable:'--font-roboto_mono'
 })

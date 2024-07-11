@@ -1,6 +1,6 @@
 import React from "react";
 import AboutMe from "../aboutMe/AboutMe";
-import FadeIn from "../aboutMe/hook/FadeIn";
+// import FadeIn from "../aboutMe/hook/FadeIn";
 import DownButton from "./components/DownButton";
 import Image from "next/image";
 

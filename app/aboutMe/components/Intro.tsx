@@ -1,5 +1,5 @@
 import React, {ReactNode} from "react";
-import FadeIn from "../hook/FadeIn";
+// import FadeIn from "../hook/FadeIn";
 import FunFacts from "./FunFacts";
 
 interface ParentComponentProps {

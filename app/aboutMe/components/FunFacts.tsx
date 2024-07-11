@@ -10,7 +10,7 @@ export default function FunFacts(){
         <>
             {facts.map((fact, id) => (
                 <div  key = {fact.id}
-                className={`p-6 border rounded-lg shadow-lg lg:hover:scale-105 ransform transition-transform ${id %2===0 ? "border-sky-900": "border-sky-500" }`}
+                className={`p-6 border rounded-lg shadow-lg lg:hover:scale-105 transform transition-transform ${id %2===0 ? "border-sky-900": "border-sky-500" }`}
                 >
                     
                     <div className="text-sm md:text-xl  ">

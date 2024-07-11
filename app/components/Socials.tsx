@@ -1,17 +1,21 @@
 'use client';
 import React, { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const links = [
     {name: "LinkedIn", href:"https://www.linkedin.com/in/samanthakang079/"},
     {name: "Github", href:"https://github.com/sammatcha"},
 
 ]
+
 export default function Socials(){
     const [isOpen, setIsOpen] = useState(false);
     const toggleDrop = () => {
         setIsOpen(!isOpen);
        }
+       
     return (
 
   
@@ -23,18 +27,18 @@ export default function Socials(){
                     </div>   
         </span>
 
-        <div className={`absolute overflow-hidden mt-2 rounded transition-all duration-75 ${isOpen ? 'w-min h-min opacity-100':'opacity-0'}`}>
+        <div className={`absolute overflow-hidden mt-2 rounded transition-transform duration-300 ease-in z-20 ${isOpen ? 'w-min h-min opacity-100 ':'opacity-0 '}`}>
 
         
      
             <div className="flex flex-col mt-2 space-y-2 ">
                 {links.map((link)=> (
-                    <a key = {link.name}
+                    <Link key = {link.name}
                     href = {link.href}
-                    className="py-2 px-4 block"
-                    >
-                        {link.name}
-                    </a>
+                    passHref
+                    className={"py-2 px-4 block hover:cursor-crosshair"}>
+                      {link.name}
+                    </Link>
                 ))}
             </div>
    

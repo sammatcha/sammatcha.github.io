@@ -9,7 +9,7 @@ export default function Gallery(){
                         <div className="flex flex-col ">
            
                             <div>
-                                <p className="mb-3">I'm currently working on new and <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-200 text-transparent bg-clip-text">exciting</span> projects</p> 
+                                <p className="mb-3">I&#39;m currently working on new and <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-200 text-transparent bg-clip-text">exciting</span> projects</p> 
                                 <p className="text-center" >Visit my <a className="border rounded-lg px-1 py-1 hover:cursor-crosshair " href="https://github.com/sammatcha">Github</a> to check it out c:</p>
                             </div>
                         </div>
