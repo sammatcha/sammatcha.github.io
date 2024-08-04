@@ -13,18 +13,17 @@ const nav = [
     {id: 1, name:'Home', href: '/'},
     {id: 2, name:'About', href: '#about'},
     {id: 3, name:'Work', href: '#work'},
-    {id: 4, name:'Blog', href: '#blog'},
+    {id: 4, name:'Blog', href: 'https://www.beyondfabled.me'},
 ];
 
 export default function MobileNavBar(){
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const toggleMobileMenu = () => {
-        console.log('Toggle menu:', !isMobileMenuOpen);
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
     return(
-        <div className="inline-flex lg:hidden overflow-hidden  min-w-full  absolute">
-            <button className={" fixed top-3 right-3 z-50 "} onClick={toggleMobileMenu}
+        <div className="inline-flex lg:hidden overflow-hidden min-w-full absolute">
+            <button className={"fixed top-3 right-3 z-50 "} onClick={toggleMobileMenu}
             >
                 
                 {!isMobileMenuOpen ? (
@@ -35,7 +34,7 @@ export default function MobileNavBar(){
                     )}
             </button>
                
-            <div className={`fixed inset-0 flex flex-col z-20 px-6 py-6 md:bg-transparent md:hidden w-full transition-transform duration-300 ease-in
+            <div className={`fixed inset-0 flex flex-col z-20 px-6 py-6 lg:bg-transparent lg:hidden w-full transition-transform duration-300 ease-in
                 ${isMobileMenuOpen? "block border border-neutral-500 bg-darkGreyBlue  h-screen" : " hidden"}`}>
                 {nav.map((item) => (
                 <a  key = {item.id}
