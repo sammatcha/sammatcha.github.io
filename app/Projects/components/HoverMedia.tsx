@@ -1,6 +1,13 @@
 import Image from "next/image";
 
-export default function HoverMedia({ImageSrc,VideoSrc, altText, width, height}) {
+interface HoverMediaProps{
+    ImageSrc: string;
+    VideoSrc?: string;
+    altText:string;
+    width:number;
+    height:number;
+}
+export default function HoverMedia({ImageSrc,VideoSrc, altText, width, height}: HoverMediaProps) {
     return(
         <div className="relative overflow-hidden group w-[200px] h-[150px] lg:w-[600px] lg:h-[450px]">
                                 <img
