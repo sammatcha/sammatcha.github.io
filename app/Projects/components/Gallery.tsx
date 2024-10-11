@@ -1,19 +1,44 @@
-import React from "react";
+// 'use client';
+import Image from "next/image";
+import React, { useState } from "react";
+import HoverMedia from "./HoverMedia";
+
 
 export default function Gallery(){
+    
     return(
-        <div>
-             <p className="text-2xl flex items-center justify-center lg:text-4xl ">Projects</p>
-                <div className="lg:p-10 mt-5 lg:mt-0">
-                    <div className="border-4 border-slightGreyBlue shadow-slightGreyBlue shadow-2xl bg-slightGreyBlue flex mx-auto max-w-fit p-5 ">
-                        <div className="flex flex-col ">
-           
-                            <div>
-                                <p className="mb-3">I'm currently working on new and <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-indigo-200 text-transparent bg-clip-text">exciting</span> projects</p> 
-                                <p className="text-center" >Visit my <a className="border rounded-lg px-1 py-1 hover:cursor-crosshair " href="https://github.com/sammatcha">Github</a> to check it out c:</p>
-                            </div>
-                        </div>
+        <div className="flex flex-col items-center justify-center">
+            <div>
+                <p className="text-2xl lg:text-4xl">Projects</p>
+             </div>
+             <div className="flex justify-center mt-10 lg:mt-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-1 auto-rows-fr ">
+
+                    <div className="w-full ">
+                            <HoverMedia 
+                            ImageSrc={"/images/project/2.png"}
+                            VideoSrc={"/images/project/to-do-list-react.mp4"}
+                            altText={"drag and drop task manager"}
+                            width={300}
+                            height={500}
+                            
+                         
+                            
+                            >
+                            </HoverMedia>
                     </div>
+                    <div className="w-full ">
+                            <HoverMedia
+                            ImageSrc={"/images/project/1.png"}
+                            VideoSrc={"/images/project/url-shortener.mp4"}
+                            altText={"drag and drop task manager"}
+                            width={300}
+                            height={500}
+                            >
+                            </HoverMedia>
+                    </div>
+                </div>
+                  
                 </div>
         </div>
     )
