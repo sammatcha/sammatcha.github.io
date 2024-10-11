@@ -48,5 +48,6 @@ Static export is necessary to deploy on github pages for a Next.js project <br>
 1. Work on tablet layout - other layout issues
 2. ~~Link blog~~
 3. Add cursor flashlight effect
-4. Work on appealing layout - depth
-5. Add to the Projects section
+4. Work on better designs
+5. ~~Add to the Projects section~~
+6. Mobile layout
