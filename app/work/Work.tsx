@@ -9,7 +9,7 @@ interface ParentConnectProps {
 export default function Work(){
 
     return(
-        <div className="min-w-full min-h-screen mt-5 lg:mt-10 " id="work">
+        <div className="min-w-full min-h-screen px-10 py-10" id="work">
             
             <div className="justify-center flex flex-col items-center">
                <div className="flex flex-col items-center mt-5 lg:mb-10">
