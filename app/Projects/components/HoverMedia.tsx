@@ -9,9 +9,9 @@ interface HoverMediaProps{
 }
 export default function HoverMedia({ImageSrc,VideoSrc, altText, width, height}: HoverMediaProps) {
     return(
-        <div className="relative overflow-hidden group w-[200px] h-[150px] lg:w-[600px] lg:h-[450px]">
+        <div className="relative overflow-hidden group w-[200px] h-[200px] md:w-[400px] md:h-[400px] ">
                                 <img
-                                className="transition-opacity duration-300 group-hover:opacity-0 inset-0 w-full h-full z-20 object-contain rounded-md overflow-hidden" 
+                                className="transition-opacity duration-300 group-hover:opacity-0 inset-0 w-full h-full z-20 object-contain rounded-md" 
                                 src={ImageSrc} 
                                 alt={altText}
                                 width={width}
@@ -25,7 +25,7 @@ export default function HoverMedia({ImageSrc,VideoSrc, altText, width, height}: 
                                 autoPlay 
                                 playsInline 
                                 preload="auto" 
-                                controls
+                                
                                
                                 >
                                 <source src={VideoSrc}/>
