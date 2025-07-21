@@ -9,7 +9,7 @@ interface HoverMediaProps{
 }
 export default function HoverMedia({ImageSrc,VideoSrc, altText, width, height}: HoverMediaProps) {
     return(
-        <div className="relative overflow-hidden group w-[200px] h-[200px] md:w-[400px] md:h-[400px] ">
+        <div className="relative overflow-hidden group  ">
                                 <img
                                 className="transition-opacity duration-300 group-hover:opacity-0 inset-0 w-full h-full z-20 object-contain rounded-md" 
                                 src={ImageSrc} 
