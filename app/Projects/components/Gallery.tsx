@@ -13,9 +13,9 @@ export default function Gallery(){
              </div>
             <div className="flex flex-col mt-5 container max-w-7xl items-center justify-center">
                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 
-                                 w-full h-full  ">
+                                 gap-6 ">
                     
-                        <div className="w-full h-full">
+                        <div className="w-full">
                             <HoverMedia 
                             ImageSrc={"/images/project/2.png"}
                             VideoSrc={"/images/project/to-do-list-react.mp4"}
@@ -25,7 +25,7 @@ export default function Gallery(){
                             >
                             </HoverMedia>
                         </div>
-                        <div >
+                        <div className="w-full">
                             <HoverMedia
                             ImageSrc={"/images/project/1.png"}
                             VideoSrc={"/images/project/url-shortener.mp4"}
@@ -36,7 +36,7 @@ export default function Gallery(){
                             </HoverMedia>
                     </div>
 
-                     <div >
+                     <div className="w-full">
                             <HoverMedia
                             ImageSrc={"/images/project/3.png"}
                             VideoSrc={"/images/project/stamp-calculator.mp4"}
