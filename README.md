@@ -36,6 +36,11 @@ Static export is necessary to deploy on github pages for a Next.js project <br>
   ```
   "npm run build && npm run export && gh-pages -d dist"
   ```
+
+  - add dist to ignore and I had a bunch of files that I removed from git's tracking (but keep locally)
+  ```
+  git rm -r --cached dist
+  ```
 ### Font
   - Next has built in font/google
 
