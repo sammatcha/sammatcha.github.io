@@ -11,7 +11,7 @@ interface ParentComponentProps {
 
 export default function Intro(){
     return(
-        <div className="container w-full md:p-10 justify-between">
+        <div className="container w-full md:m-10 justify-between">
             <div className="flex flex-col justify-center h-auto lg:max-w-md lg:w-1/2 ">
                 <div className="text-sm roboto_mono-text lg:leading-relaxed lg:tracking-wide xl:text-lg">
                     <h1 className="text-lg xl:text-3xl 2xl:text-4xl font-bold flex justify-center lg:justify-normal">About</h1>
@@ -28,12 +28,15 @@ export default function Intro(){
                 </div>
             </div>
            
-            <div className="grid grid-cols-1 grid-flow-row gap-4 lg:gap-6 lg:max-w-xs lg:mt-10">
-                <div className="text-sm text-sky-500 flex justify-end roboto-mono-text mt-4 lg:hidden">
-                    Fun facts
-                </div>
+           <div className="max-w-xl my-10">
+                  <p className="text-sm md:text-lg font-bold roboto-text text-sky-500 flex  roboto-mono-text  mb-5"> 3 Truths & 1 Lie</p> 
+                
+            <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-fr gap-4 lg:gap-6  ">
+                
                 <FunFacts/>
-            </div>                    
+            </div>
+            </div>
+                                
           
            
          
