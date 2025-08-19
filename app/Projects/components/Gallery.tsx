@@ -47,6 +47,17 @@ export default function Gallery(){
                             </HoverMedia>
                     </div>
 
+                    <div className="w-full">
+                            <HoverMedia
+                            ImageSrc={"/images/project/4.png"}
+                            VideoSrc={"/images/project/wheel-spin.mp4"}
+                            altText={"stamp calculator"}
+                            width={800}
+                            height={800}
+                            >
+                            </HoverMedia>
+                    </div>
+
                 </div>
                
 
