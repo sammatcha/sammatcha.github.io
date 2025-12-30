@@ -12,14 +12,25 @@ type Job = {
 const jobs: Job[] = [
     {
      id: 0 , 
+     date: 'May 2024 - Current', 
+     name: 'Independent | Freelance ', 
+     body: [
+        'Consulted on business process automation using Google Apps Script, streamlining order workflows',
+        'Identified workflow bottlenecks and built a Google Apps Script to consolidate card intake data, improving visibility for e-commerce listing decisions',
+        'Built and operated an e-commerce trading card business, owning inventory management and order fulfillment',
+    ],
+    logo : '/images/logos/self-employed.png',
+    },
+    {
+     id: 1 , 
      date: 'December 2022 - March 2024', 
      name: 'Up Point | Software Developer', 
      body: [
-        'Developed three responsive websites using Laravel, React, and Tailwind CSS',
-        'Designed and implemented database schemas using MySQL',
-        'Integrated payment APIs into in-development projects',
-        'Automated the deployment of servers using Proxmox API',
-        'Created technical and non-technical documentation'
+        'Developed and debugged 4+ responsive web applications from Adobe XD mockups using Laravel, React and CSS',
+        'Automated server deployment using Proxmox API, reducing manual setup time by 50%',
+        'Integrated Stripe and Block Cypher RESTful APIs for payment processing',
+        'Created technical and non-technical documentation for team processes and project workflows',
+        'Designed and implemented database schemas for a Laravel and React-based web application'
     ],
     logo : '/images/logos/uppoint-logo.png',
     },
@@ -28,11 +39,9 @@ const jobs: Job[] = [
         date: 'June 2022 - August 2022', 
         name: 'PennyMac | Data Analyst Intern', 
         body: [
-            'Conducted data analysis and visualization to support business decision-making processes',
-            'Produced over 15 performance model dashboards',
-            'Entered data from over 12 invoices to aid in budget forecasting',
-            'Utilized Excel (VLOOKUP) and SQL queries to perform data validations.'
-
+            'Built and presented 10+ interactive Tableau dashboards to senior leadership, providing insight into operational metrics',
+            'Entered and validated invoice data to support team budget forecasting',
+            'Joined datasets using SQL queries via AWS Athena and validated results using Excel (VLOOKUP) to ensure data accuracy'
         ],
         logo: '/images/logos/penny-logo.png'
     },

@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function AboutMe(){
     return(
        <>
-            <header className={"min-h-screen min-w-full bg-slightGreyBlue relative p-10 lg:bg-[url('/images/background/about-me-bg.png')] bg-contain bg-no-repeat bg-right-bottom bg-opacity-40  "} >
+            <header className={"w-full bg-slightGreyBlue relative p-10 lg:bg-[url('/images/background/aboutMe-bg.png')] bg-contain bg-no-repeat bg-[position:110%_100%] "} >
                 <div className={"flex flex-col md:flex-col"} id="about">
                    
                     <div>

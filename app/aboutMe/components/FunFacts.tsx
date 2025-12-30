@@ -28,8 +28,8 @@ export default function FunFacts(){
         <>
             {facts.map((fact, id) => (
                 <div onClick={() => handleOnClick(fact.id)} key = {fact.id}
-                className={`px-5 py-3 border rounded-lg shadow-lg lg:hover:scale-105 cursor-help transform transition-transform ${id %2===0 ? "border-sky-900": "border-sky-500" }
-                  ${selectedId === fact.id ? (fact.answer ? 'border-red-500': 'border-green-500') : ''}  `}
+                className={`px-5 py-3 border rounded-lg shadow-lg lg:hover:scale-105 cursor-help transform transition-transform  }
+                  ${selectedId === fact.id ? (fact.answer === false ? 'border-red-500': 'border-green-500') : id %2===0 ? "border-sky-700": "border-sky-600"}  `}
                 >
                     
                     <div className="text-sm md:text-lg  ">
