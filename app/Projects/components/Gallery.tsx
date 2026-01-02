@@ -19,7 +19,7 @@ export default function Gallery(){
                         <div className="w-full">
                             <Link href="https://github.com/sammatcha/DND-Task-Manager">
                             <HoverMedia 
-                            ImageSrc={"/images/project/2.png"}
+                            ImageSrc={"/images/project/1-1.png"}
                             VideoSrc={"/images/project/to-do-list-react.mp4"}
                             altText={"drag and drop task manager"}
                             width={700}
@@ -35,11 +35,11 @@ export default function Gallery(){
                         <div className="w-full">
                             <Link href="https://github.com/sammatcha/urlshortener">
                                 <HoverMedia
-                                ImageSrc={"/images/project/1.png"}
+                                ImageSrc={"/images/project/2-1.png"}
                                 VideoSrc={"/images/project/url-shortener.mp4"}
                                 altText={"drag and drop task manager"}
-                                width={700}
-                                height={700}
+                                width={600}
+                                height={600}
                                 >
                                 </HoverMedia>
                             </Link>
