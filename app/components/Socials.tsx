@@ -28,9 +28,6 @@ export default function Socials(){
         </span>
 
         <div className={`absolute overflow-hidden mt-2 rounded transition-transform duration-300 ease-in z-20 ${isOpen ? 'w-min h-min opacity-100 ':'opacity-0 '}`}>
-
-        
-     
             <div className="flex flex-col mt-2 space-y-2 ">
                 {links.map((link)=> (
                     <Link key = {link.name}
