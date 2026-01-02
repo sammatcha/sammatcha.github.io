@@ -11,7 +11,7 @@ export default function HoverMedia({ImageSrc,VideoSrc, altText, width, height}: 
     return(
         <div className="relative overflow-hidden group  ">
                                 <img
-                                className="transition-opacity duration-300 group-hover:opacity-0 inset-0 w-full h-full z-20 object-contain rounded-md" 
+                                className="transition-opacity duration-300 group-hover:opacity-0 inset-0 w-full z-20 object-contain rounded-md" 
                                 src={ImageSrc} 
                                 alt={altText}
                                 width={width}

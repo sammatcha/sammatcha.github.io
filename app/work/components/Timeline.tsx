@@ -48,42 +48,43 @@ const jobs: Job[] = [
 ];
 export default function Timeline(){
     return(
-        <div className="relative p-4 flex flex-col justify-center items-center max-w-5xl" >
+        <div className="relative p-4 flex flex-col justify-center items-center max-w-5xl mx-auto" >
+            <div className="absolute h-full "> </div>
             {jobs.map((job, index) => {
                const isLeft = index % 2 === 0;
                return(
-                <div key = {job.id} className={`flex w-full mb-8   ${isLeft ? "lg:flex-row-reverse ": "lg:flex-row "}`}>
-                    <div className={`flex lg:w-1/2 lg:pl-10 ${isLeft ? "lg:text-left" : "lg:text-right"}`}>
-                       <div className={`roboto-text px-3 py-2 lg:p-4 order-last lg:order-none`}>
-                           <p className="text-md lg:text-xl text-gray-400 underline decoration-1 ">{job.date}</p>
-                           <p className="text-md lg:text-lg font-bold">{job.name}</p>
-                            <ul className="list-disc text-neutral-300">
-                                {job.body.map((duty,idx) => (
-                                    <li key={idx} className="font-thin list-inside ">
-                                        {duty}
-                                    </li>
-                                ))}
-                            </ul>
-                           
-                       </div>
-                   </div>
-                                                     {/* LOGO DIV */}
-                   <div className={`flex md:px-5 lg:px-0 lg:w-5/6 order-first lg:order-none  ${isLeft ? "lg:justify-end  lg:pr-4": "lg:justify-start lg:pl-4 "}`} >
-                        <div className="size-20 mt-2 rounded-full md:size-24 border-2 flex lg:size-40 lg:mt-0 lg:p-1">
-                            <Image src={job.logo} alt={"logo images of employment"} width={200} height={200} className=" rounded-full bg-slightGreyBlue"/>
-                        </div>
+                    <div key = {job.id} className={`flex mb-8 relative  `}>
+                            <div className={`flex ${isLeft ? "flex-row-reverse pl-56" : "flex-row pr-56"}`}>
+                                <div className={`flex w-1/2 ${isLeft ? "lg:text-left" : "lg:text-right"}`}>
+                                    <div className={`roboto-text order-last lg:order-none`}>
+                                        <p className="text-md lg:text-xl text-gray-400 underline decoration-1 ">{job.date}</p>
+                                        <p className="text-md lg:text-lg font-bold">{job.name}</p>
+                                        <ul className="list-disc text-neutral-300">
+                                            {job.body.map((duty,idx) => (
+                                            <li key={idx} className="font-thin list-inside ">
+                                                {duty}
+                                            </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                       
+                                    {/* LOGO DIV */}
+                      
+                            <div className=" absolute top-0 left-1/2 transform -translate-x-1/2 size-20 rounded-full md:size-24 border-2 flex lg:size-40 lg:mx-0 lg:p-1  ">
+                                <Image src={job.logo} alt={"logo images of employment"} width={200} height={200} className="rounded-full bg-slightGreyBlue"/>
+                            </div>
                     </div>
-           
-                </div>
-        
-             
                 )})
 
-             }
-
+            }
+           
         </div>
       
     )
 }
 
-// max-w-md lg:max-w-5xl
+
+                            
+                        {/* order-first lg:order-none */}
