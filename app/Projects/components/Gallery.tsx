@@ -1,112 +1,70 @@
 // 'use client';
 import Image from "next/image";
 import React, { useState } from "react";
-import HoverMedia from "./HoverMedia";
+// import HoverMedia from "./HoverMedia";
 import Link from "next/link";
 
-
 export default function Gallery(){
-    
     return(
-        <div className="flex flex-col items-center justify-center mx-auto">
+        <div className="flex flex-col items-center justify-center mx-auto w-full">
             <div>
-                <p className="text-2xl lg:text-4xl w-full">Projects</p>
+                <p className="text-2xl lg:text-4xl">Projects</p>
              </div>
-            <div className="flex flex-col mt-5 container max-w-7xl items-center justify-center">
-                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-1 
-                                 gap-6 ">
-                    
-                        <div className="w-full">
-                            <Link href="https://github.com/sammatcha/DND-Task-Manager">
-                            <HoverMedia 
-                            ImageSrc={"/images/project/1-1.png"}
-                            VideoSrc={"/images/project/to-do-list-react.mp4"}
-                            altText={"drag and drop task manager"}
-                            width={700}
-                            height={700}
-                            >
-                            </HoverMedia>
-                            </Link>
-                            <h3 className="text-gray-300 text-center ">Drag and Drop Task Manager</h3>
-                            <p className="text-neutral-300 mt-1 text-center">React • TypeScript • Vite </p>
-                          
+
+            <div className="mt-5 container max-w-xl items-center justify-center grid grid-cols-1 grid-rows-1 gap-6">
+                 <div>
+                    {/* project 1 */}
+                        <div className="w-full border border-transparent hover:bg-slate-600 hover:opacity-90 p-3">
+                            <div className="flex">
+                                <Image src={"/images/project/3-1.png"} alt={"stamp calculator"} width={200} height={200} className="pr-5" />
+                                <div className="flex flex-col">
+                                    <h3 className="text-gray-300 text-lg">Stamp Calculator</h3>
+                                    <p className="text-neutral-400 mt-1 text-sm">Postage calculator that returns both retail and metered pricing for letter envelopes-using the USPS API for metered pricing </p>
+                                    <p className="text-neutral-300 mt-1 text-sm">NodeJS • React • API • Docker • Reliability Monitoring </p>
+
+                                </div>
+                            </div>
+                            <Link href="https://sammatcha.github.io/stamp-calculator"></Link>
+                        </div>
+                    {/* project 2 */}
+                        <div className="w-full border border-transparent hover:bg-slate-600 hover:opacity-90 p-3">
+                            <div className="flex">
+                                <Image src={"/images/project/5.png"} alt={"blog"} width={200} height={200} className="pr-5" />
+                                <div className="flex flex-col">
+                                    <h3 className="text-gray-300 text-lg">Content Platform</h3>
+                                    <p className="text-neutral-400 mt-1 text-sm">CMS-driven content platform tracking analytics on Vercel  </p>
+                                    <p className="text-neutral-300 mt-1 text-sm">NextJS • React • PayloadCMS • Vercel </p>
+
+                                </div>
+                            </div>
+                            <Link href="https://www.beyondfabled.me/blog/tcg-player-how-i-ship-cards"></Link>
+                        </div>
+                        
+                    {/* project 3 */}
+                        <div className="w-full border border-transparent hover:bg-slate-600 hover:opacity-90 p-3">
+                            <div className="flex">
+                                <Image src={"/images/project/2-1.png"} alt={"url shortener"} width={200} height={200} className="pr-5" />
+                                <div className="flex flex-col">
+                                    <h3 className="text-gray-300 text-lg">URL Shortener</h3>
+                                    <p className="text-neutral-400 mt-1 text-sm">URL shortener with persistent database storage and server-side redirect handling</p>
+                                    <p className="text-neutral-300 mt-1 text-sm">Go • React • PostgreSQL • Docker </p>
+
+                                </div>
+                            </div>
+                            
+                            <Link href="https://github.com/sammatcha/urlshortener"></Link>
                             
                         </div>
-                        <div className="w-full">
-                            <Link href="https://github.com/sammatcha/urlshortener">
-                                <HoverMedia
-                                ImageSrc={"/images/project/2-1.png"}
-                                VideoSrc={"/images/project/url-shortener.mp4"}
-                                altText={"drag and drop task manager"}
-                                width={600}
-                                height={600}
-                                >
-                                </HoverMedia>
-                            </Link>
-                            <h3 className="text-gray-300 text-center">URL Shortener</h3>
-                            <p className="text-neutral-300 mt-1 text-center">Go • React • PostgreSQL </p>
-                          
-                            
-                    </div>
-
-                     <div className="w-full">
-                        <Link href="https://sammatcha.github.io/stamp-calculator">
-                            <HoverMedia
-                            ImageSrc={"/images/project/3-1.png"}
-                            VideoSrc={"/images/project/3-1.mp4"}
-                            altText={"stamp calculator"}
-                            width={800}
-                            height={800}
-                            >
-                            </HoverMedia>
-                        </Link>
-                        <h3 className="text-gray-300 text-center mt-3">Stamp Calculator</h3>
-                        <p className="text-neutral-300 mt-1 text-center">NodeJS • React • API • Docker </p>
-                            
-                    </div>
-
-                    <div className="w-full">
-                        <Link href="https://sammatcha.github.io/wheel-spinner">
-                            <HoverMedia
-                            ImageSrc={"/images/project/4-1.png"}
-                            VideoSrc={"/images/project/wheel-spinner.mp4"}
-                            altText={"wheel spinner"}
-                            width={700}
-                            height={700}
-                            >
-                            </HoverMedia>
-                        </Link>
-                        <h3 className="text-gray-300 text-center mt-3">Wheel Spinner</h3>
-                        <p className="text-neutral-300 mt-1 text-center">TypeScript • React  </p>
-                    </div>
-                        
-                            
-
-                    <div className="w-full ">
-                            <Link href="https://www.beyondfabled.me/blog/tcg-player-how-i-ship-cards">
-                                <HoverMedia
-                            ImageSrc={"/images/project/5.png"}
-                            VideoSrc={"/images/project/content-platform.mp4"}
-                            altText={"wheel spinner"}
-                            width={800}
-                            height={800}
-                            >
-                            </HoverMedia>
-                            </Link>
-                            <h3 className="text-gray-300 text-center mt-3">Content Platform</h3>
-                            <p className="text-neutral-300 mt-1 text-center">NextJS • React • PayloadCMS • Vercel </p>
-
-                    </div>
-                    <div className="w-full ">
+                    <div className="w-full border border-transparent hover:bg-slate-600 hover:opacity-90 p-3">
                             <Link href="https://application-tracker-bice.vercel.app/">
-                                <HoverMedia
+                                {/* <HoverMedia
                             ImageSrc={"/images/project/6.png"}
                             VideoSrc={"/images/project/job-app.mp4"}
                             altText={"wheel spinner"}
                             width={800}
                             height={800}
                             >
-                            </HoverMedia>
+                            </HoverMedia> */}
                             </Link>
                             <h3 className="text-gray-300 text-center mt-3">Job Application</h3>
                             <p className="text-neutral-300 mt-1 text-center">TypeScript • React • Supabase </p>
