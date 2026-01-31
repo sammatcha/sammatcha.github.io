@@ -13,12 +13,12 @@ export default function Connect({href}: ConnectProps){
         router.push(href)
     }
     return(
-        <div className="flex bg-gray-400 rounded-md">
-            <Link href={href}
+        <div className="flex">
+            <Link 
+            href={href}
             onClick={handleClick} passHref
-            className="hover:cursor-crosshair font-bold inter-text border-2 rounded-md border-slightlyGreyBlue bg-neutral-200 max-w-[10rem] px-2 py-2 text-black hover:bg-slightGreyBlue hover:text-white hover:border-white"
-            >
-           Connect with Me
+            className="mb-8 lg:mg-0 hover:cursor-crosshair inter-text border-2 rounded-full hover:bg-white text-white hover:text-black max-w-fit px-3 py-2 hover:shadow-lg hover:scale-105 transition-all duration-300">
+                Connect with Me
             </Link>
         </div>
     )

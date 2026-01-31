@@ -11,9 +11,9 @@ export default function AppShell({children}: {children: React.ReactNode}) {
     }
     return(
         <>
-            <main className="flex flex-col lg:flex-row ">
+            <main className="flex flex-col lg:flex-row">
                 {!ready && (
-                        <span className="flex text-4xl p-10">
+                        <span className="flex text-4xl ">
                             <span>$</span>
                             <span 
                                 className="ml-1 inline-block overflow-hidden whitespace-nowrap animate-typewriter"
@@ -25,7 +25,7 @@ export default function AppShell({children}: {children: React.ReactNode}) {
                         </span>
                 )}
                 {ready && (
-                    <aside className={`sticky top-0 w-full bg-slightGrayBlue lg:h-screen lg:w-72`}>
+                    <aside className={`sticky top-0 w-full bg-darkGrayBlue lg:bg-slightGrayBlue lg:h-screen z-50 lg:w-72`}>
                         <SideBar ready={ready} onIntroDone={OnIntroDone} />
                     </aside>
                 )}

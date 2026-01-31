@@ -30,7 +30,6 @@ export default function Intro(){
            
            <div className="max-w-xl my-10">
                   <p className="text-lg font-bold roboto-text text-sky-500 flex roboto-mono-text mb-5"> 3 Truths & 1 Lie</p> 
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-fr gap-4 lg:gap-6 ">
                     <FunFacts/>
                 </div>

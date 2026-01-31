@@ -28,8 +28,7 @@ export default function FunFacts() {
                     className={`p-4 items-center border rounded-lg shadow-lg lg:hover:scale-105 cursor-help transform transition-transform max-w-xl }
                   ${selectedId === fact.id ? (fact.answer === false ? 'border-red-500' : 'border-green-500') : id % 2 === 0 ? "border-sky-700" : "border-sky-600"}  `}
                 >
-
-                    <div className="text-lg place-self-center">
+                    <div className="text-lg place-self-center  ">
                         {fact.description}
                     </div>
                 </div>

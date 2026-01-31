@@ -6,9 +6,10 @@ import Image from "next/image";
 
 export default function Home(){
     return(
-        <div className="min-h-screen min-w-full relative flex items-center justify-center"  >
-             <div className="bg-radial-gradient absolute inset-0 opacity-70 "> </div>
-            <div className="relative flex flex-col justify-center items-center h-auto space-y-4">
+        <div className="h-screen min-w-full relative flex items-center justify-center"  >
+            <div id="#home">
+                <div className="bg-radial-gradient absolute inset-0 opacity-70 "> </div>
+                    <div className="relative flex flex-col justify-center items-center h-auto space-y-4">
                     <div className="animate-slidein opacity-0 [--slidein-delay:300ms] bg-gradient-to-r from-blue-400 via-cyan-400 to-yellow-300 text-transparent bg-clip-text">
                         <p className="dancing-text font-bold text-6xl xl:text-7xl 2xl:text-9xl ">
                         hello
@@ -31,13 +32,12 @@ export default function Home(){
                                 </span>
                             </p>
                     </div>
-
                    
                     <div>
                         <DownButton/>
                     </div>
               
-            
+                </div>
             </div>
         </div>
 

@@ -48,12 +48,12 @@ const jobs: Job[] = [
 ];
 export default function Timeline(){
     return(
-        <div className="relative p-4 flex flex-col justify-center items-center max-w-5xl mx-auto" >
+        <div className="relative p-10 flex flex-col justify-center items-center max-w-5xl mx-auto " >
             <div className="absolute h-full "> </div>
             {jobs.map((job, index) => {
                const isLeft = index % 2 === 0;
                return(
-                    <div key = {job.id} className={`flex mb-8 relative `}>
+                    <div key = {job.id} className={`flex mb-4 lg:mb-8 relative `}>
                             <div className={`flex ${isLeft ? "lg:flex-row-reverse lg:pl-56" : "lg:flex-row lg:pr-56"}`}>
                                 <div className={`flex lg:w-1/2 ${isLeft ? "lg:text-left" : "lg:text-right"}`}>
                                     <div className={`roboto-text order-last lg:order-none`}>
@@ -61,7 +61,7 @@ export default function Timeline(){
                                         <p className="text-md lg:text-lg font-bold">{job.name}</p>
                                         <ul className="list-disc text-neutral-300">
                                             {job.body.map((duty,idx) => (
-                                            <li key={idx} className="font-thin list-inside ">
+                                            <li key={idx} className="font-normal lg:font-normal list-inside ">
                                                 {duty}
                                             </li>
                                             ))}

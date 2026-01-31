@@ -14,9 +14,10 @@ type SideBarProps = {
 };
 
 const nav = [
-    {id: 1, name:' Home', href: '/'},
-    {id: 2, name:' About', href: '#about'},
-    {id: 3, name:' Work', href: '#work'},
+    {id: 1, name:'Home', href: '#home'},
+    {id: 2, name:'About', href: '#about'},
+    {id: 3, name:'Work', href: '#work'},
+    {id: 4, name: 'Projects', href:'#projects'}
 ];
 
 export default function SideBar({ready, onIntroDone}: SideBarProps) {
@@ -50,15 +51,15 @@ export default function SideBar({ready, onIntroDone}: SideBarProps) {
                 {/* mobile nav */}
                 {open && (
                 <>
-                <div className="flex flex-col h-screen items-center lg:hidden ">
-                      <div className="flex flex-col items-center flex-1 gap-6 lg:hidden">
+                <div className="flex flex-col h-screen justify-center items-center lg:hidden ">
+                      <div className="flex flex-col flex-1 gap-6 lg:hidden">
                    {nav.map((item) => (
                     <a 
                     key = {item.id}
                     href = {item.href}
                     className="gap-3 items-center flex hover:text-cyan-300 "
                     >
-                        <span className="text-lg ">{">"}</span>
+                        <span className="text-lg justify-start">{">"}</span>
                         <span className="text-2xl "> {item.name}</span>
                
                     </a>
@@ -70,15 +71,12 @@ export default function SideBar({ready, onIntroDone}: SideBarProps) {
                         
                     </div>
                 </div>
-                   
-
-
                 </>
             )}         
                 {/* desktop nav */}
                 <div className={"space-y-2 items-center hidden lg:flex lg:flex-col lg:h-screen justify-around"}>
                     <div className="space-y-3">
-                        {nav.map((item) => (
+                        {nav.map((item) => ( 
                             <a 
                             key = {item.id}
                             href = {item.href}
