@@ -16,8 +16,8 @@ const config: Config = {
       },
       colors: {
         'darkMode' : '#0F172A',
-        'slightGreyBlue' : '#1E293B',
-        'darkGreyBlue' : '#131B2E',
+        'slightGrayBlue' : '#1E293B',
+        'darkGrayBlue' : '#131B2E',
         'soft-white': '#F3F4F6',
         'light-gray' : '#CBD5E0',
         'soft-gray' : '#A0AEC0',
@@ -40,10 +40,21 @@ const config: Config = {
             transform: "translateY(0)",
           },
         },
+        typing: {
+          from: {width: "0ch"},
+          to: {width: "6ch"}
+        },
+        blink: {
+          "0%, 50%, 100%": {opacity: "1"},
+          "25%, 75%": {opacity: "0"}
+        },
       },
-      animation: {
+      animation:{
        slidein: "slidein 1s ease var(--slidein-delay,0) forwards",
-      }
+       typewriter: "typing 1.4s steps(6)  forwards",
+       blinkCursor: "blink step-end infinite 2s"
+      },
+      
     },
   },
   plugins: [],

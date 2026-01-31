@@ -6,10 +6,11 @@ import Image from "next/image";
 
 export default function Home(){
     return(
-        <div className="min-h-screen min-w-full relative flex items-center justify-center z-10"  >
-             <div className="bg-radial-gradient absolute inset-0 opacity-70 "> </div>
-            <div className="relative flex flex-col justify-center items-center h-auto space-y-4">
-                    <div className="animate-slidein opacity-0 [--slidein-delay:300ms] bg-gradient-to-r from-blue-800 via-blue-400 to-yellow-300 text-transparent bg-clip-text">
+        <div className="h-screen min-w-full relative flex items-center justify-center"  >
+            <div id="#home">
+                <div className="bg-radial-gradient absolute inset-0 opacity-70 "> </div>
+                    <div className="relative flex flex-col justify-center items-center h-auto space-y-4">
+                    <div className="animate-slidein opacity-0 [--slidein-delay:300ms] bg-gradient-to-r from-blue-400 via-cyan-400 to-yellow-300 text-transparent bg-clip-text">
                         <p className="dancing-text font-bold text-6xl xl:text-7xl 2xl:text-9xl ">
                         hello
                         </p>
@@ -26,18 +27,17 @@ export default function Home(){
                                 <span className="roboto-text mr-2 text-lg md:text-2xl xl:text-2xl 2xl:text-5xl">
                             Welcome to my little corner of the
                                 </span>
-                                <span className="text-4xl xl:text-6xl 2xl:text-7xl font-bold bg-gradient-to-r from-blue-800 via-blue-400 to-yellow-300 text-transparent bg-clip-text">
+                                <span className="text-4xl xl:text-6xl 2xl:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-yellow-300 text-transparent bg-clip-text">
                                 multiverse.
                                 </span>
                             </p>
                     </div>
-
                    
                     <div>
                         <DownButton/>
                     </div>
               
-            
+                </div>
             </div>
         </div>
 

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Satisfy, Dancing_Script, Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
-import NavBar from "./components/NavBar";
+import SideBar from "./components/SideBar";
+import AppShell from "./appShell";
 
  const inter = Inter({ 
   subsets: ['latin'],
@@ -48,9 +49,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${roboto.variable} ${dancing.variable} ${satisfy.variable} ${roboto_mono.variable} ` }>
-       <NavBar/>
-        {children}
-        </body>
+        <AppShell>
+          {children}
+        </AppShell>
+
+      </body>
     </html>
   );
 }

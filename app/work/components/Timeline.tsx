@@ -48,20 +48,20 @@ const jobs: Job[] = [
 ];
 export default function Timeline(){
     return(
-        <div className="relative p-4 flex flex-col justify-center items-center max-w-5xl mx-auto" >
+        <div className="relative p-10 flex flex-col justify-center items-center max-w-5xl mx-auto " >
             <div className="absolute h-full "> </div>
             {jobs.map((job, index) => {
                const isLeft = index % 2 === 0;
                return(
-                    <div key = {job.id} className={`flex mb-8 relative  `}>
-                            <div className={`flex ${isLeft ? "flex-row-reverse pl-56" : "flex-row pr-56"}`}>
-                                <div className={`flex w-1/2 ${isLeft ? "lg:text-left" : "lg:text-right"}`}>
+                    <div key = {job.id} className={`flex mb-4 lg:mb-8 relative `}>
+                            <div className={`flex ${isLeft ? "lg:flex-row-reverse lg:pl-56" : "lg:flex-row lg:pr-56"}`}>
+                                <div className={`flex lg:w-1/2 ${isLeft ? "lg:text-left" : "lg:text-right"}`}>
                                     <div className={`roboto-text order-last lg:order-none`}>
                                         <p className="text-md lg:text-xl text-gray-400 underline decoration-1 ">{job.date}</p>
                                         <p className="text-md lg:text-lg font-bold">{job.name}</p>
                                         <ul className="list-disc text-neutral-300">
                                             {job.body.map((duty,idx) => (
-                                            <li key={idx} className="font-thin list-inside ">
+                                            <li key={idx} className="font-normal lg:font-normal list-inside ">
                                                 {duty}
                                             </li>
                                             ))}
@@ -72,7 +72,7 @@ export default function Timeline(){
                        
                                     {/* LOGO DIV */}
                       
-                            <div className=" absolute top-0 left-1/2 transform -translate-x-1/2 size-20 rounded-full md:size-24 border-2 flex lg:size-40 lg:mx-0 lg:p-1  ">
+                            <div className="hidden absolute top-0 left-1/2 transform -translate-x-1/2 size-20 lg:flex rounded-full md:size-24 border-2 lg:size-40 lg:mx-0 lg:p-1  ">
                                 <Image src={job.logo} alt={"logo images of employment"} width={200} height={200} className="rounded-full bg-slightGreyBlue"/>
                             </div>
                     </div>
@@ -84,7 +84,3 @@ export default function Timeline(){
       
     )
 }
-
-
-                            
-                        {/* order-first lg:order-none */}
