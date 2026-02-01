@@ -39,7 +39,7 @@ export default function SideBar({ready, onIntroDone}: SideBarProps) {
                     <span>$</span>
                     <span className="ml-1 overflow-hidden whitespace-nowrap ">
                     whoami</span>
-                    <span className="inline-block animate-blinkCursor ">|</span>     
+                    <span className="inline-block animate-blinkCursor">|</span>     
                 </div> 
                 <button
                     className="lg:hidden z-[60]"
