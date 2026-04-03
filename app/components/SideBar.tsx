@@ -33,7 +33,7 @@ export default function SideBar({ready, onIntroDone}: SideBarProps) {
         }
     } , [open])
     return(
-       <nav className="shadow-lg shadow-cyan-500/50 border-shadow-lg backdrop-blur-sm ">
+       <nav className="shadow-lg shadow-cyan-500/50 border-shadow-lg backdrop-blur-sm text-white">
             <div className={`lg:flex-col flex ${!open? "justify-between":"justify-end"} p-10 `}>
                 <div className={`text-4xl ${open? "hidden":"block"} lg:block`}>
                     <span>$</span>
@@ -57,7 +57,7 @@ export default function SideBar({ready, onIntroDone}: SideBarProps) {
                     <a 
                     key = {item.id}
                     href = {item.href}
-                    className="gap-3 items-center flex hover:text-cyan-300 "
+                    className="gap-3 items-center flex text-white hover:text-cyan-300 "
                     >
                         <span className="text-lg justify-start">{">"}</span>
                         <span className="text-2xl "> {item.name}</span>
@@ -80,7 +80,7 @@ export default function SideBar({ready, onIntroDone}: SideBarProps) {
                             <a 
                             key = {item.id}
                             href = {item.href}
-                            className="gap-3 flex items-center hover:text-cyan-300 "
+                            className="gap-3 flex items-center text-white hover:text-cyan-300 "
                             >
                             <span className="text-lg ">{">"}</span>
                             <span className="text-2xl "> {item.name}</span>
