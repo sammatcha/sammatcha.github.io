@@ -16,8 +16,14 @@ export default function Gallery(){
                  <div>
                     {/* project 1 */}
                         <div className=" w-full border border-transparent hover:bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.5),_transparent_70%)] hover:scale-105 transition-transform duration-300 p-5">
-                            <div className="flex lg:flex-row flex-col relative lg:gap-3">
-                                <Image src={"/images/project/3-1.png"} alt={"stamp calculator"} width={200} height={200} className="p-3 lg:p-0 w-full lg:w-1/3 rounded-xl " />
+                            <div className="flex lg:flex-row flex-col w-full relative lg:gap-3 overflow-hidden">
+                                <Image 
+                                src={"/images/project/3-1.png"} 
+                                alt={"stamp calculator"} 
+                                width={200} 
+                                height={200} 
+                                className="p-3 lg:p-0 mx-auto w-full max-w-xs rounded-xl lg:max-w-none lg:w-1/3 lg:mx-0 object-cover object-top" 
+                                />
                                 <div className="flex flex-col w-full px-4 lg:px-0">
                                     <h3 className="mt-3 text-gray-300 text-lg text-center lg:text-start lg:mt-0">Stamp Calculator</h3>
                                     <p className="text-neutral-400 mt-1 text-sm">Postage calculator that returns both retail and metered pricing for letter envelopes-using the USPS API for metered pricing </p>
@@ -38,7 +44,13 @@ export default function Gallery(){
                     {/* project 2 */}
                         <div className="w-full border border-transparent hover:bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.5),_transparent_70%)] hover:scale-105 p-5 lg:p-0 lg:py-10 lg:px-5 ">
                             <div className="flex lg:flex-row flex-col relative lg:gap-3">
-                                <Image src={"/images/project/5.png"} alt={"blog"} width={200} height={200} className="p-3 lg:p-0 w-full lg:w-1/3 rounded-xl" />
+                                <Image 
+                                src={"/images/project/5.png"} 
+                                alt={"blog"} 
+                                width={200} 
+                                height={200} 
+                                className="p-3 lg:p-0 mx-auto w-full max-w-xs rounded-xl lg:max-w-none lg:w-1/3 lg:mx-0 object-cover object-top" 
+                                />
                                 <div className="flex flex-col w-full lg:px-0 px-4">
                                     <h3 className="mt-3 text-gray-300 text-lg text-center lg:text-start lg:mt-0">Content Platform</h3>
                                     <p className="text-neutral-400 mt-1 text-sm">CMS-driven content platform tracking analytics on Vercel  </p>
@@ -58,7 +70,13 @@ export default function Gallery(){
                     {/* project 3 */}
                         <div className="w-full border border-transparent hover:bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.5),_transparent_70%)] hover:scale-105 p-5 lg:p-0 lg:py-10 lg:px-5 ">
                             <div className="flex lg:flex-row flex-col relative lg:gap-3">
-                                <Image src={"/images/project/2-1.png"} alt={"url shortener"} width={200} height={200} className="p-3 lg:p-0 w-full lg:w-1/3 rounded-xl" />
+                                <Image 
+                                src={"/images/project/2-1.png"} 
+                                alt={"url shortener"} 
+                                width={200} 
+                                height={200} 
+                                className="p-3 lg:p-0 mx-auto w-full max-w-xs rounded-xl lg:max-w-none lg:w-1/3 lg:mx-0 object-cover object-top" 
+                                />
                                 <div className="flex flex-col w-full lg:px-0 px-4">
                                     <h3 className="mt-3 text-gray-300 text-lg text-center lg:text-start lg:mt-0">URL Shortener</h3>
                                     <p className="text-neutral-400 mt-1 text-sm">URL shortener with persistent database storage and server-side redirect handling</p>
@@ -76,7 +94,13 @@ export default function Gallery(){
                         </div>
                     <div className="w-full border border-transparent hover:bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.5),_transparent_70%)] hover:scale-105 p-5 lg:p-0 lg:py-10 lg:px-5  ">
                         <div className="flex lg:flex-row flex-col relative lg:gap-3">
-                                <Image src={"/images/project/6.png"} alt={"url shortener"} width={200} height={200} className="p-3 lg:p-0 w-full lg:w-1/3 rounded-xl" />
+                                <Image 
+                                src={"/images/project/6.png"} 
+                                alt={"url shortener"} 
+                                width={200} 
+                                height={200} 
+                                className="p-3 lg:p-0 mx-auto w-full max-w-xs rounded-xl lg:max-w-none lg:w-1/3 lg:mx-0 object-cover object-top" 
+                                />
                                 <div className="flex flex-col w-full lg:px-0 px-4">
                                     <h3 className="mt-3 text-gray-300 text-lg text-center lg:text-start lg:mt-0">Job Application</h3>
                                     <p className="text-neutral-400 mt-1 text-sm">Job application tracking with Supbase authentication</p>

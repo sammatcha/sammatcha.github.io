@@ -67,7 +67,8 @@ function JobText({
     align?: "left" | "right";
 }) {
     return (
-        <div className={`roboto-text `}>
+        <div className={`roboto-text max-w-md ${
+  align === "right" ? "lg:ml-auto lg:text-right" : "lg:text-left"}`}>
             <p className="text-md lg:text-xl text-sky-400/80 underline underline-offset-4">
                 {job.date}
             </p>
@@ -95,7 +96,7 @@ export default function Timeline(){
                        <div className="flex flex-col gap-4 mb-10 md:mb-12 lg:hidden ">
                             <div className="flex gap-4 "> 
                                 <JobLogo logo={job.logo} />
-                                <div className="roboto-text flex items-center">
+                                <div className="roboto-text inline-flex flex-col ">
                                     <p className="text-md text-sky-400/80 underline underline-offset-4 ">
                                         {job.date}
                                     </p>
@@ -116,7 +117,7 @@ export default function Timeline(){
                         <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-8 lg:mb-16">
                             {isLeft ? (
                                 <>
-                                    <JobText job={job} align="left" />
+                                    <JobText job={job} align="right" />
                                     <div className="flex justify-center">
                                         <JobLogo logo={job.logo} />
                                     </div>
@@ -128,7 +129,7 @@ export default function Timeline(){
                                     <div className="flex justify-center">
                                         <JobLogo logo={job.logo} />
                                     </div>
-                                    <JobText job={job} align="right" />
+                                    <JobText job={job} align="left" />
                                 </>
                             )}
                         </div>
