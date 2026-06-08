@@ -33,7 +33,7 @@ export default function MobileNavBar(){
             </button>
                
             <div className={`sticky inset-0 flex flex-col px-6 py-6 lg:bg-transparent lg:hidden w-full 
-                ${isMobileMenuOpen? "block border border-neutral-500 bg-darkGreyBlue  h-screen" : " hidden"}`}>
+                ${isMobileMenuOpen? "block border border-neutral-500 bg-darkGrayBlue  h-screen" : " hidden"}`}>
                 {nav.map((item) => (
                 <a  key = {item.id}
                     href = {item.href}

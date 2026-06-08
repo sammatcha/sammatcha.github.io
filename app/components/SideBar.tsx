@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Socials from "./Socials";
-import MobileNavBar from "./MobileNavBar";
 import { X , MenuIcon} from "lucide-react";
 
 type Item  = {
@@ -17,7 +16,8 @@ const nav = [
     {id: 1, name:'Home', href: '#home'},
     {id: 2, name:'About', href: '#about'},
     {id: 3, name:'Work', href: '#work'},
-    {id: 4, name: 'Projects', href:'#projects'}
+    {id: 4, name: 'Certifications', href:'#certs'},
+    {id: 5, name: 'Projects', href:'#projects'}
 ];
 
 export default function SideBar({ready, onIntroDone}: SideBarProps) {
@@ -33,8 +33,9 @@ export default function SideBar({ready, onIntroDone}: SideBarProps) {
         }
     } , [open])
     return(
-       <nav className="shadow-lg shadow-cyan-500/50 border-shadow-lg backdrop-blur-sm text-white">
-            <div className={`lg:flex-col flex ${!open? "justify-between":"justify-end"} p-10 `}>
+       <nav className="shadow-lg shadow-cyan-500/50 border-shadow-lg backdrop-blur-sm text-white lg:flex lg:flex-col lg:h-full
+            shrink-0">  
+            <div className={`lg:flex-col flex px-5 py-4 lg:px-8 lg:pt-8 lg:pb-4  ${!open? "justify-between":"justify-end"}  `}>
                 <div className={`text-4xl ${open? "hidden":"block"} lg:block`}>
                     <span>$</span>
                     <span className="ml-1 overflow-hidden whitespace-nowrap ">
@@ -51,8 +52,8 @@ export default function SideBar({ready, onIntroDone}: SideBarProps) {
                 {/* mobile nav */}
                 {open && (
                 <>
-                <div className="flex flex-col h-screen justify-center items-center lg:hidden ">
-                      <div className="flex flex-col flex-1 gap-6 lg:hidden">
+                <div className="flex flex-col h-screen justify-center items-center w-full lg:hidden ">
+                      <div className="flex flex-col flex-1 gap-6 px-5 lg:hidden">
                    {nav.map((item) => (
                     <a 
                     key = {item.id}
@@ -74,8 +75,10 @@ export default function SideBar({ready, onIntroDone}: SideBarProps) {
                 </>
             )}         
                 {/* desktop nav */}
-                <div className={"space-y-2 items-center hidden lg:flex lg:flex-col lg:h-screen justify-around"}>
-                    <div className="space-y-3">
+                <div className={`hidden lg:flex flex-1 flex-col min-h-0`}>
+
+                
+                        <div className="flex flex-1 flex-col justify-center px-8 space-y-3 ">
                         {nav.map((item) => ( 
                             <a 
                             key = {item.id}
@@ -87,14 +90,12 @@ export default function SideBar({ready, onIntroDone}: SideBarProps) {
                
                             </a>
                             ))}
-                    </div>
-                    <div className="mt-auto ">
-                            <Socials/>
-                    </div>     
-                
-           
+                        </div>
+                            <div className="shrink-0 pb-8 px-8">
+                                <Socials/>
+                            </div>
+          
                 </div>
-            
-       </nav>
+  </nav>
     )
 }

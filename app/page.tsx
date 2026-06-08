@@ -8,7 +8,7 @@ import SideBar from "./components/SideBar";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen lg:p-20">
+    <main className="min-h-screen">
         <Home/>
         <AboutMe/>
         <Work/>

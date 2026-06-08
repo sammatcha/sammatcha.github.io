@@ -9,20 +9,16 @@ interface ParentConnectProps {
 export default function Work(){
 
     return(
-        <div className="min-w-full lg:mt-20 " id="work">
-            <div className="justify-center flex flex-col items-center w-full">
-               <div className="flex flex-col justify-center items-center lg:mt-5 lg:mb-10 ">
-                    <h1 className="text-2xl lg:text-4xl ">Timeline </h1>
-                    <div className="border-b w-10 lg:w-20 lg:ms-5"></div>
-                    <Timeline/>
-                </div>
-                
-            </div>
-           
-                                {/* CONNECT */}
-            <div className="flex flex-col justify-center items-center mb-10 lg:mb-10">
-                <div className="flex justify-center items-center">
-                <Connect href={"https://www.linkedin.com/in/samanthakang079/"}/>
+        <div className="w-full " id="work">
+            <div className="justify-center flex flex-col items-center w-full scroll-mt-20 lg:scroll-mt-0 py-14 px-5 md:py-20 md:px-8 lg:py-24 lg:px-10 ">
+              
+                    <h1 className="text-2xl lg:text-4xl text-center lg:text-left">Timeline </h1>
+                    <div className="w-full max-w-6xl mx-auto mt-4 md:mt-5 lg:mt-6 ">
+                          <Timeline/>
+                    </div>
+                  
+                <div className="mt-12 md:mt-16 flex justify-center items-center">
+                    <Connect href={"https://www.linkedin.com/in/samanthakang079/"}/>
                 </div>
             </div>
         </div>

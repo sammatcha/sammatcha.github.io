@@ -35,7 +35,7 @@ const jobs: Job[] = [
     logo : '/images/logos/uppoint-logo.png',
     },
     {
-        id: 1 , 
+        id: 2 , 
         date: 'June 2022 - August 2022', 
         name: 'PennyMac | Data Analyst Intern', 
         body: [
@@ -46,41 +46,97 @@ const jobs: Job[] = [
         logo: '/images/logos/penny-logo.png'
     },
 ];
+function JobLogo({ logo }: { logo: string }) {
+    return (
+        <div className="overflow-hidden shrink-0 rounded-full border size-16 md:size-24 lg:size-32 lg:p-1">
+            <Image
+                src={logo}
+                alt="Company logo"
+                width={300}
+                height={300}
+                className="rounded-full bg-slightGrayBlue"
+            />
+        </div>
+    );
+}
+function JobText({
+    job,
+    align = "left",
+}: {
+    job: Job;
+    align?: "left" | "right";
+}) {
+    return (
+        <div className={`roboto-text max-w-md ${
+  align === "right" ? "lg:ml-auto lg:text-right" : "lg:text-left"}`}>
+            <p className="text-md lg:text-xl text-sky-400/80 underline underline-offset-4">
+                {job.date}
+            </p>
+            <p className="text-md lg:text-lg font-bold">{job.name}</p>
+            <ul className="mt-2 list-disc space-y-2 pl-5 text-neutral-300 lg:mt-3">
+                {job.body.map((duty, idx) => (
+                    <li key={idx} className="font-normal">
+                        {duty}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
 export default function Timeline(){
     return(
-        <div className="relative p-10 flex flex-col justify-center items-center max-w-5xl mx-auto " >
-            <div className="absolute h-full "> </div>
+        <div className="relative flex flex-col w-full mx-auto " >
+            
             {jobs.map((job, index) => {
                const isLeft = index % 2 === 0;
                return(
-                    <div key = {job.id} className={`flex mb-4 lg:mb-8 relative `}>
-                            <div className={`flex ${isLeft ? "lg:flex-row-reverse lg:pl-56" : "lg:flex-row lg:pr-56"}`}>
-                                <div className={`flex lg:w-1/2 ${isLeft ? "lg:text-left" : "lg:text-right"}`}>
-                                    <div className={`roboto-text order-last lg:order-none`}>
-                                        <p className="text-md lg:text-xl text-gray-400 underline decoration-1 ">{job.date}</p>
-                                        <p className="text-md lg:text-lg font-bold">{job.name}</p>
-                                        <ul className="list-disc text-neutral-300">
-                                            {job.body.map((duty,idx) => (
-                                            <li key={idx} className="font-normal lg:font-normal list-inside ">
-                                                {duty}
-                                            </li>
-                                            ))}
-                                        </ul>
-                                    </div>
+                    <div key = {job.id}>
+                        
+                       <div className="flex flex-col gap-4 mb-10 md:mb-12 lg:hidden ">
+                            <div className="flex gap-4 "> 
+                                <JobLogo logo={job.logo} />
+                                <div className="roboto-text inline-flex flex-col ">
+                                    <p className="text-md text-sky-400/80 underline underline-offset-4 ">
+                                        {job.date}
+                                    </p>
+                                    <p className="text-md font-bold">{job.name}</p>
                                 </div>
                             </div>
-                       
-                                    {/* LOGO DIV */}
-                      
-                            <div className="hidden absolute top-0 left-1/2 transform -translate-x-1/2 size-20 lg:flex rounded-full md:size-24 border-2 lg:size-40 lg:mx-0 lg:p-1  ">
-                                <Image src={job.logo} alt={"logo images of employment"} width={200} height={200} className="rounded-full bg-slightGreyBlue"/>
-                            </div>
-                    </div>
-                )})
+                            <ul className="list-disc space-y-2 pl-5 text-neutral-300">
+                                {job.body.map((duty, idx) => (
+                                    <li key={idx} className="font-normal">
+                                        {duty}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        
 
-            }
-           
+                        {/* desktop alternating */}
+                        <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-8 lg:mb-16">
+                            {isLeft ? (
+                                <>
+                                    <JobText job={job} align="right" />
+                                    <div className="flex justify-center">
+                                        <JobLogo logo={job.logo} />
+                                    </div>
+                                    <div />
+                                </>
+                            ) : (
+                                <>
+                                    <div />
+                                    <div className="flex justify-center">
+                                        <JobLogo logo={job.logo} />
+                                    </div>
+                                    <JobText job={job} align="left" />
+                                </>
+                            )}
+                        </div>
+                    </div>
+                );
+            })}
         </div>
-      
+                        
     )
 }

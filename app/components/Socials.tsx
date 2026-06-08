@@ -11,7 +11,7 @@ const links = [
 
 export default function Socials(){
     return (
-   <div className="relative mt-2 flex items-center justify-center ">
+   <div className="relative ">
             <div className="space-y-1 ">
                 {links.map((link)=> (
                     <Link 
