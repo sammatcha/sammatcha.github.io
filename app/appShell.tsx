@@ -42,18 +42,17 @@ export default function AppShell({children}: {children: React.ReactNode}) {
                         className=" inline-block overflow-hidden whitespace-nowrap animate-typewriter"
                         onAnimationEnd={OnIntroDone}
                         >
-                        whoami</span>
+                        whoami
+                    </span>
                         <span className="inline-block animate-blinkCursor ml-1">|</span>
                                
                 </span>
-                <aside className={`sticky top-0 w-full bg-darkGrayBlue lg:bg-slightGrayBlue lg:h-screen z-50 lg:w-72 transition-opacity duration-700 ease-out ${ready ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                <aside className={`sticky top-0 w-full bg-darkGrayBlue lg:bg-slightGrayBlue lg:h-screen z-50 lg:w-72 transition-opacity duration-700 ease-out lg:border-r border-white/10 ${ready ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                     {ready && <SideBar ready={ready} onIntroDone={OnIntroDone} />}
                 </aside>
                 <div className={`flex-1 transition-all duration-700 ease-out ${ready ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 pointer-events-none'}`}>
                      {children}
                 </div>
-                
-     
             </main>
         </>
        

@@ -12,10 +12,10 @@ export default function Gallery(){
                 <p className="text-2xl lg:text-4xl">Projects</p>
              </div>
 
-            <div className="mt-5 container max-w-xl lg:max-w-2xl items-center justify-center grid grid-cols-1 grid-rows-1 gap-6">
+            <div className="mt-4 md:mt-5 lg:mt-6 max-w-4xl mx-auto items-center justify-center grid grid-cols-1 grid-rows-1 gap-8 md:gap-10">
                  <div>
                     {/* project 1 */}
-                        <div className="relative w-full border border-transparent hover:bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.5),_transparent_70%)] hover:scale-105 transition-transform duration-300 p-5 lg:p-0 lg:py-10 lg:px-5">
+                        <div className=" w-full border border-transparent hover:bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.5),_transparent_70%)] hover:scale-105 transition-transform duration-300 p-5">
                             <div className="flex lg:flex-row flex-col relative lg:gap-3">
                                 <Image src={"/images/project/3-1.png"} alt={"stamp calculator"} width={200} height={200} className="p-3 lg:p-0 w-full lg:w-1/3 rounded-xl " />
                                 <div className="flex flex-col w-full px-4 lg:px-0">
