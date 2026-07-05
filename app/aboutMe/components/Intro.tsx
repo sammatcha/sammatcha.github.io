@@ -7,7 +7,7 @@ export default function Intro(){
         <div className="w-full ml-2 md:ml-4 lg:ml-8 max-w-2xl ">
             <div className="flex flex-col justify-center h-auto  ">
                 <div className="text-sm roboto_mono-text lg:leading-relaxed lg:tracking-wide xl:text-lg">
-                    <h1 className="text-2xl xl:text-3xl 2xl:text-4xl font-bold flex justify-center lg:justify-normal">About</h1>
+                    <h1 className="text-2xl mb-5 md:mb-10 xl:text-3xl 2xl:text-4xl font-bold flex justify-center lg:justify-normal">About</h1>
                         <div className="text-slate-300 inline-block mt-4 md:mt-5 lg:mt-6 ">
                             <p>With over a year of professional experience, I have worked extensively with Laravel and React. </p>
                             <p className="mt-1">

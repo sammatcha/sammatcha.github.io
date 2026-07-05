@@ -52,7 +52,6 @@ export default function RootLayout({
         <AppShell>
           {children}
         </AppShell>
-
       </body>
     </html>
   );
