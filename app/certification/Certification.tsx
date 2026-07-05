@@ -5,7 +5,7 @@ export default function Certification() {
     return (
         <div className="w-full bg-slightGrayBlue relative">
             <div className={"flex flex-col w-full mx-auto py-14 px-5 md:py-20 md:px-8 lg:py-24 lg:px-10 md:flex-col scroll-mt-20 lg:scroll-mt-0"} id="certs">
-                <h1 className="text-2xl lg:text-4xl text-center ">Certifications</h1>
+                <h1 className="text-2xl mb-5 md:mb-10 lg:text-4xl text-center ">Certifications</h1>
                
                     {/* <div className="grid grid-cols-1 divide-y space-y-4 mb-4 lg:mb-0 lg:divide-y-0 lg:grid-cols-2 p-3 lg:p-10 lg:divide-x-2 divide-gray-500 "> */}
                     {/* <div className="flex flex-col items-center space-y-4 ">
