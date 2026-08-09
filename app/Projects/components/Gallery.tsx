@@ -1,7 +1,6 @@
 // 'use client';
 import Image from "next/image";
 import React, { useState } from "react";
-// import HoverMedia from "./HoverMedia";
 import Link from "next/link";
 import { SquareArrowOutDownRight, SquareArrowUpRightIcon } from "lucide-react";
 import ExternalLinkIcon from "./ExternalLinkIcon";
@@ -34,12 +33,29 @@ const projects = [
     },
     {
         id:4,
-        image: '/images/project/6.png',
+        image: '/images/project/6-1.png',
         name: 'Job Application Tracker',
         description: 'Job application tracking with Supbase authentication',
         tech: 'TypeScript • React • Supabase',
         github: 'https://github.com/sammatcha/job-app-tracker',
         link: 'https://application-tracker-bice.vercel.app'
+    },
+    {
+        id:5,
+        image: '/images/project/7.png',
+        name: 'Personal Finance Dashboard',
+        description: 'Sandbox Plaid-integrated finance tracking with transactions ummaries and budget-vs-actual insights',
+        tech: 'TypeScript • React • Node/Express • PostgreSQL • Plaid API',
+        github: 'https://github.com/sammatcha/plaid-finance-dashboard',
+        link: 'https://plaid-finance-dashboard-tau.vercel.app/'
+    },
+    {
+        id:6,
+        image: '/images/project/8.png',
+        name: 'Job Finder Pipeline',
+        description: 'Automated job scraping with Discord alert notifications',
+        tech: 'Python • JobSpy • Cron • Discord Webhooks',
+        github: 'https://github.com/sammatcha/job-finder',
     }
 ]
 export default function Gallery(){
@@ -74,16 +90,16 @@ export default function Gallery(){
                                     <div className="flex items-center justify-end cursor-pointer gap-2 mt-2">
                                         {project.github ? (
                                             <Link href={project.github}>
-                                            <Image 
-                                                className={"hover:scale-105 transition-transform duration-300"}
-                                                src={'/images/project/github1.png'} 
-                                                alt="GitHub"  
-                                                width={40}
-                                                height={40}
-                                            />
-                                        </Link>
+                                                <Image 
+                                                    className={"hover:scale-105 transition-transform duration-300"}
+                                                    src={'/images/project/github1.png'} 
+                                                    alt="GitHub"  
+                                                    width={40}
+                                                    height={40}
+                                                />
+                                            </Link>
                                         ):(
-                                            <span className="hover:opacity-20 ">
+                                            <span className="hover:opacity-20 cursor-not-allowed">
                                                  <Image 
                                                 className={"hover:scale-105 transition-transform duration-300"}
                                                 src={'/images/project/github1.png'} 
@@ -100,7 +116,7 @@ export default function Gallery(){
                                                 <ExternalLinkIcon/>
                                             </Link>
                                         ):(
-                                            <span className="hover:opacity-20 ">
+                                            <span className="hover:opacity-20 cursor-not-allowed">
                                                 <ExternalLinkIcon/>
                                             </span>
                                         )
