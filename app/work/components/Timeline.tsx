@@ -19,7 +19,7 @@ const jobs: Job[] = [
         'Identified workflow bottlenecks and built a Google Apps Script to consolidate card intake data, improving visibility for e-commerce listing decisions',
         'Built and operated an e-commerce trading card business, owning inventory management and order fulfillment',
     ],
-    logo : '/images/logos/self-employed.png',
+    logo : '/images/logos/self-employed.webp',
     },
     {
      id: 1 , 
@@ -32,7 +32,7 @@ const jobs: Job[] = [
         'Created technical and non-technical documentation for team processes and project workflows',
         'Designed and implemented database schemas for a Laravel and React-based web application'
     ],
-    logo : '/images/logos/uppoint-logo.png',
+    logo : '/images/logos/uppoint-logo.webp',
     },
     {
         id: 2 , 
@@ -43,7 +43,7 @@ const jobs: Job[] = [
             'Entered and validated invoice data to support team budget forecasting',
             'Joined datasets using SQL queries via AWS Athena and validated results using Excel (VLOOKUP) to ensure data accuracy'
         ],
-        logo: '/images/logos/penny-logo.png'
+        logo: '/images/logos/penny-logo.webp'
     },
 ];
 function JobLogo({ logo }: { logo: string }) {

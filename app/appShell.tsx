@@ -3,58 +3,59 @@
 import { useState, useEffect } from "react";
 import SideBar from "./components/SideBar";
 
-export default function AppShell({children}: {children: React.ReactNode}) {
-    const [ready, setReady] = useState(false);
-    const [animationStarted, setAnimationStarted] = useState(false);
-    
-    const OnIntroDone = () => {
-        setAnimationStarted(true);
-    }
+export default function AppShell({ children }: { children: React.ReactNode }) {
+  const [ready, setReady] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
 
-    // Fallback: ensure content shows even if animation doesn't complete
-    useEffect(() => {
-        const fallbackTimer = setTimeout(() => {
-            if (!ready) {
-                setReady(true);
-            }
-        }, 2800); // 1.8s animation + 1s buffer
+  // Fallback if animationend never fires
+  useEffect(() => {
+    if (!showIntro || ready) return;
+    const fallbackTimer = setTimeout(() => {
+      sessionStorage.setItem("introSeen", "1");
+      setReady(true);
+      setShowIntro(false);
+    }, 3000);
 
-        return () => clearTimeout(fallbackTimer);
-    }, [ready]);
+    return () => clearTimeout(fallbackTimer);
+  }, [showIntro, ready]);
 
-    // Start reveal transition after animation completes
-    useEffect(() => {
-        if (animationStarted) {
-            const revealTimer = setTimeout(() => {
-                setReady(true);
-            }, 200); // Short delay for smooth transition
-            
-            return () => clearTimeout(revealTimer);
-        }
-    }, [animationStarted]);
+  const OnIntroDone = () => {
+    // sessionStorage.setItem("introSeen", "1");
+    setTimeout(() => {
+      setReady(true);
+      setShowIntro(false);
+    }, 250);
+  };
 
-    return(
-        <>
+  return (
+    <>
+      {/* Site only after intro finishes */}
+        {ready && (
             <main className="flex flex-col lg:flex-row">
-                <span className={`flex text-4xl p-10 transition-opacity duration-500 ${ready ? 'opacity-0 pointer-events-none absolute' : 'opacity-100'}`}>
-                    <span>$</span>
-                    <span 
-                        className=" inline-block overflow-hidden whitespace-nowrap animate-typewriter"
-                        onAnimationEnd={OnIntroDone}
-                        >
-                        whoami
-                    </span>
-                        <span className="inline-block animate-blinkCursor ml-1">|</span>
-                               
-                </span>
-                <aside className={`sticky top-0 w-full bg-darkGrayBlue lg:bg-slightGrayBlue lg:h-screen z-50 lg:w-72 transition-opacity duration-700 ease-out lg:border-r border-white/10 ${ready ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                    {ready && <SideBar ready={ready} onIntroDone={OnIntroDone} />}
-                </aside>
-                <div className={`flex-1 transition-all duration-700 ease-out ${ready ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4 pointer-events-none'}`}>
-                     {children}
-                </div>
-            </main>
-        </>
-       
-    )
+          <aside className="sticky top-0 w-full bg-darkGrayBlue lg:bg-slightGrayBlue lg:h-screen z-50 lg:w-72 lg:border-r border-white/10">
+            <SideBar ready={ready} onIntroDone={OnIntroDone} />
+          </aside>
+          <div className="flex-1">{children}</div>
+        </main>
+        )}
+        
+      
+
+      {/* Typewriter only — first visit */}
+      {showIntro && (
+        <div className="fixed inset-0 z-[100] flex items-start bg-darkGrayBlue p-10">
+          <span className="flex text-4xl text-white">
+            <span>$</span>
+            <span
+              className="inline-block overflow-hidden whitespace-nowrap animate-typewriter"
+              onAnimationEnd={OnIntroDone}
+            >
+              whoami
+            </span>
+            <span className="inline-block animate-blinkCursor ml-1">|</span>
+          </span>
+        </div> 
+      )}
+    </>
+  );
 }
