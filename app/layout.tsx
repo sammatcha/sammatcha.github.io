@@ -38,7 +38,7 @@ import AppShell from "./appShell";
 
 export const metadata: Metadata = {
   title: "Hi, I'm Sam - Developer",
-  description: "personal portfolio website",
+  description: "Software engineeer across web, full-stack, and infrastructure",
 };
 
 export default function RootLayout({

@@ -51,7 +51,7 @@ const config: Config = {
       },
       animation:{
        slidein: "slidein 1s ease var(--slidein-delay,0) forwards",
-       typewriter: "typing 1.8s steps(6, end) forwards",
+       typewriter: "typing 1.5s steps(6, end) forwards",
        blinkCursor: "blink 2s step-end infinite"
       },
       
