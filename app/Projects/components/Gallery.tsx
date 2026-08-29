@@ -9,7 +9,7 @@ const featuredProjects = [
         image: '/images/project/3-1.webp',
         name: 'Stamp Calculator',
         description: 'Postage calculator that returns both retail and metered pricing for letter envelopes using the USPS API for metered pricing',
-        tech: ['NodeJS', 'React', 'API', 'Docker', 'Reliability Monitoring'],
+        tech: ['NodeJS', 'React', 'API', 'Docker', 'Reliability Monitoring', 'Github Actions'],
         github: 'https://github.com/sammatcha/stamp-calculator', 
         link: 'https://sammatcha.github.io/stamp-calculator'
     },
