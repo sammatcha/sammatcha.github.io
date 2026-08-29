@@ -95,7 +95,7 @@ export default function Gallery(){
                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
                     </div>
-                    <div className="flex flex-1 flex-col p-3 sm:p-4 md:p-5">
+                    <div className="flex flex-1 flex-col p-3 sm:p-4 md:p-5 cursor-pointer">
                         <div className="flex items-start justify-between gap-3">
                             <h3 className="text-soft-white text-base sm:text-lg md:text-xl font-semibold leading-snug">
                                 {featured.name}
@@ -141,7 +141,7 @@ export default function Gallery(){
             <div className="mb-3 md:mb-4">
                 <p className="text-sm tracking-widest uppercase text-slate-300"> - More Projects</p>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 md:gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 md:gap-4 cursor-pointer">
                 {projects.map((project) => (
                     <div
                         key={project.id}
@@ -155,11 +155,11 @@ export default function Gallery(){
                                 {project.github ? (
                                     <Link href={project.github} target="_blank" rel="noopener noreferrer">
                                         <Image
-                                            className="hover:opacity-80 transition-opacity"
+                                            className="hover:opacity-60 transition-opacity"
                                             src={'/images/project/github1.webp'}
                                             alt="GitHub"
-                                            width={24}
-                                            height={24}
+                                            width={30}
+                                            height={30}
                                         />
                                     </Link>
                                 ) : null}
