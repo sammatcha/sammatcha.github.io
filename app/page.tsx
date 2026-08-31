@@ -12,8 +12,8 @@ export default function HomePage() {
         <Home/>
         <AboutMe/>
         <Work/>
-        <Certification/>
         <Projects/>
+        <Certification/>
     </main>
   );
 }

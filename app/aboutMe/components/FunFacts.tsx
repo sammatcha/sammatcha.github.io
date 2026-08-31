@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 
 const facts = [
-    { id: 0, title: 'me', description: 'I have rabbits and a 3 year old Shiba Inu', answer: true },
+    { id: 0, title: 'me', description: 'I have rabbits and a 5 year old Shiba Inu', answer: true },
     { id: 1, title: 'Fact', description: 'I have been stung by a scorpion', answer: true },
-    { id: 2, title: 'Fact', description: 'I have been lost on a trail in Hawaii for about 5 hours', answer: true },
+    { id: 2, title: 'Fact', description: 'Spent 5+ hours lost on a hike in Hawaii and had to hike out in the dark', answer: true },
     { id: 3, title: 'Fact', description: 'I have never broken a bone', answer: false },
 
 ]
@@ -19,7 +19,6 @@ export default function FunFacts() {
             setSelectedId(null);
         }, 5000);
     }
-
     return (
         <>
             {facts.map((fact, id) => (
