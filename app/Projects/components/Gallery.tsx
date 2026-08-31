@@ -97,7 +97,7 @@ export default function Gallery(){
                     </div>
                     <div className="flex flex-1 flex-col p-3 sm:p-4 md:p-5 cursor-pointer">
                         <div className="flex items-start justify-between gap-3">
-                            <h3 className="text-soft-white text-base sm:text-lg md:text-xl font-semibold leading-snug">
+                            <h3 className="text-soft-white text-base md:text-xl font-semibold leading-snug">
                                 {featured.name}
                             </h3>
                             <div className="flex shrink-0 items-center gap-2">
@@ -119,7 +119,7 @@ export default function Gallery(){
                                 ) : null}
                             </div>
                         </div>
-                        <p className="text-neutral-400 mt-2 text-sm leading-relaxed">
+                        <p className="text-neutral-400 mt-2 text-base md:text-lg leading-relaxed">
                             {featured.description}
                         </p>
                         <div className="mt-4 flex flex-wrap gap-2">
@@ -178,7 +178,7 @@ export default function Gallery(){
                         <p className="text-neutral-400 mt-1.5 text-xs sm:text-sm leading-relaxed">
                             {project.description}
                         </p>
-                        <p className="text-neutral-500 mt-2 text-xs">
+                        <p className="text-neutral-300 mt-2 text-xs">
                             {project.tech.join(' · ')}
                         </p>
                     </div>
