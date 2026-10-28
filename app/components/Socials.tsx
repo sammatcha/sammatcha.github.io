@@ -6,7 +6,9 @@ import Link from "next/link";
 const links = [
     {name: "[linkedin]",  href:"https://www.linkedin.com/in/samanthakang079"},
     {name: "[github]", href:"https://github.com/sammatcha"},
-    {name: "[docs]", href:"https://sammatcha.github.io/dev-notes"}
+    {name: "[docs]", href:"https://sammatcha.github.io/dev-notes"},
+    {name: "[changelog]", href:"https://still-up-cyan.vercel.app/"}
+
 ]
 
 export default function Socials(){
